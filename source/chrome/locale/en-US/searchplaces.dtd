@@ -1,0 +1,134 @@
+<!ENTITY title "SearchPlaces">
+<!ENTITY select_query "Select a query to edit">
+<!ENTITY editor_tooltip "Create/edit Places queries">
+<!ENTITY new_button "New">
+<!ENTITY copy_button "Copy">
+<!ENTITY edit_button "Edit">
+<!ENTITY new_tooltip "Create new query">
+<!ENTITY copy_tooltip "Copy selected query">
+<!ENTITY edit_tooltip "Edit selected query">
+
+<!ENTITY display "Display options">
+<!ENTITY show_bm "Bookmarks menu">
+<!ENTITY showbm_tooltip "Display on Bookmarks menu">
+<!ENTITY show_tools "Tools menu">
+<!ENTITY showtools_tooltip "Display on Tools menu">
+<!ENTITY show_org "Bookmarks organiser">
+<!ENTITY showorg_tooltip "Display on Bookmarks Organiser">
+<!ENTITY show_manage "Manage Bookmarks">
+<!ENTITY showmanage_tooltip "Display on Manage Bookmarks Tools menu">
+
+<!ENTITY apply_button "Apply">
+<!ENTITY query "Query">
+<!ENTITY query_name "Name">
+<!ENTITY queryname_tooltip "Name of the query">
+<!ENTITY place_uri "URI">
+<!ENTITY placeuri_tooltip "The query string">
+
+<!ENTITY parameters "Parameters">
+<!ENTITY current_time "Current time">
+<!ENTITY currenttime_tooltip "The time, in seconds since January 1, 1970 GMT">
+<!ENTITY begin_time "Begin time">
+<!ENTITY begintime_tooltip "The time, in seconds of the earliest result to return">
+<!ENTITY begin_time_ref "Begin time is relative to:">
+<!ENTITY end_time "End time">
+<!ENTITY endtime_tooltip "The time, in seconds of the latest result to return">
+<!ENTITY end_time_ref "End time is relative to:">
+<!ENTITY jan1970 "January 1, 1970 GMT">
+<!ENTITY today "Midnight this morning">
+<!ENTITY now "Now">
+<!ENTITY terms "Search term">
+<!ENTITY terms_tooltip "Text found in the entry">
+<!ENTITY tag "Search for tags">
+<!ENTITY tag_tooltip "The search term applies to tags only">
+<!ENTITY not_tag "Not tagged with search term">
+<!ENTITY not_tag_tooltip "Return items that are not tagged with the search match">
+<!ENTITY only_bookmarked "Only bookmarked">
+<!ENTITY onlybookmarked_tooltip "Only bookmarked items are included in the results">
+<!ENTITY min_visits "Minimum visits">
+<!ENTITY minvisits_tooltip "Only include items with a visit count higher">
+<!ENTITY max_visits "Maximum visits">
+<!ENTITY maxvisits_tooltip "Only include items with a visit count lower">
+
+<!ENTITY folder "Folder to query">
+<!ENTITY root "Everything">
+<!ENTITY menu "Bookmarks menu">
+<!ENTITY toolbar "Toolbar">
+<!ENTITY tags "Tags">
+<!ENTITY unfiled "Unfiled bookmarks">
+<!ENTITY domain "Domain">
+<!ENTITY domain_tooltip "Query for items matching this host or domain name">
+<!ENTITY domain_host "Domain is host">
+<!ENTITY domainhost_tooltip "If set, domain must be an exact match. Otherwise, anything that ends in domain is considered a match">
+<!ENTITY annotation "Annotation">
+<!ENTITY annotation_tooltip "The annotation to match when querying">
+<!ENTITY reject_annotation "Reject annotation">
+<!ENTITY rejectannotation_tooltip "If true, items that don't have the specified annotation are rejected">
+<!ENTITY uri "URI">
+<!ENTITY uri_tooltip "The URI to match">
+<!ENTITY uri_prefix "URI is prefix">
+<!ENTITY uriprefix_tooltip "If true, any entry that begins with the specified URI is considered a match">
+
+<!ENTITY attributes "Attributes">
+<!ENTITY sort_by "Sort by">
+<!ENTITY unsorted "Unsorted">
+<!ENTITY title_asc "Title">
+<!ENTITY visit "Last visit">
+<!ENTITY location "Location">
+<!ENTITY visit_count "Visit count">
+<!ENTITY keyword "Keyword">
+<!ENTITY date_added "Date added">
+<!ENTITY last_modified "Last modified">
+<!ENTITY tags "Tags">
+<!ENTITY anno "Annotation">
+<!ENTITY asc "Ascending">
+<!ENTITY desc "Descending">
+<!ENTITY sorting_annotation "Annotation">
+<!ENTITY sortingannotation_tooltip "The annotation to use when sorting by annotation">
+
+<!ENTITY type "Type of results">
+<!ENTITY uri "URI">
+<!ENTITY visit "Visit">
+<!ENTITY full_visit "Full visit">
+<!ENTITY date_query "Date query">
+<!ENTITY site_query "Site query">
+<!ENTITY date_site_query "Date+Site query">
+<!ENTITY tag_query "Tag query">
+<!ENTITY tag_container "Tag container">
+<!ENTITY exclude_items "Exclude items">
+<!ENTITY excludeitems_tooltip "Only folders and queries returned">
+<!ENTITY exclude_queries "Exclude queries">
+<!ENTITY excludequeries_tooltip "Exclude queries from the results">
+<!ENTITY exclude_folders "Exclude read-only folders">
+<!ENTITY excludefolders_tooltip "Exclude read-only folders">
+<!ENTITY expand_queries "Expand queries">
+<!ENTITY expandqueries_tooltip "Place URIs appear as containers in the results">
+<!ENTITY show_sessions "Show sessions">
+<!ENTITY showsessions_tooltip "session information is used to group history items">
+
+<!ENTITY include_hidden "Include hidden">
+<!ENTITY includehidden_tooltip "Include hidden history items">
+<!ENTITY apply_containers "Apply to containers">
+<!ENTITY applycontainers_tooltip "Only apply query options to the containers">
+
+<!ENTITY resolve_titles "Resolve titles">
+<!ENTITY resolvetitles_tooltip "Bookmarks with null titles will get their page titles fetched from history if possible">
+<!ENTITY max_results "Max results">
+<!ENTITY maxresults_tooltip "The maximum results returned. 0 = all results">
+<!ENTITY query_type "Query type">
+<!ENTITY history "History">
+<!ENTITY bookmarks "Bookmarks">
+<!ENTITY both "Both">
+<!ENTITY exclude_annotation "Exclude annotation">
+<!ENTITY excludeannotation_tooltip "Items whose parent has this value as an annotation are excluded from the query results">
+<!ENTITY original_title "Original title">
+<!ENTITY originaltitle_tooltip "Retrieves the original page title">
+
+<!ENTITY redirects_mode "Redirects mode">
+<!ENTITY all "Redirected-from and -to pages">
+<!ENTITY source "Redirected-from pages">
+<!ENTITY target "Redirected-to pages">
+
+<!ENTITY help "Help">
+<!ENTITY search_help "Help creating queries">
+<!ENTITY searchplaces_help "Help using SearchPlaces">

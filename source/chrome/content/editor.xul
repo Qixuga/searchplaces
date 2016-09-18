@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://searchplaces/locale/searchplaces.dtd">
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the SearchPlaces extension.
+   -
+   - The Initial Developer of the Original Code is Andy Halford.
+   - Portions created by the Initial Developer are Copyright (C) 2009-2011
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<dialog id="searchplacesOptions"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&title; 1.4.2"
+        buttons="accept,cancel,extra1"
+        buttonlabelextra1="&apply_button;"
+        onload="SearchPlaces.Editor.onDialogLoad();"
+        ondialogaccept="return SearchPlaces.Editor.onDialogAccept();"
+        ondialogextra1="SearchPlaces.Editor.onDialogApply();"
+        persist="screenX screenY">
+
+  <script type="application/x-javascript" src="chrome://searchplaces/content/searches.js" />
+  <script type="application/x-javascript" src="chrome://searchplaces/content/editor.js" />
+
+  <groupbox>
+		<caption label="&query;"/>
+		<grid flex="1">
+			<columns>
+				<column align="right"/>
+				<column flex="1"/>
+			</columns>
+			<rows>
+				<row align="center">
+					<label control="query_name" value="&query_name;" />
+					<textbox id="query_name" tooltiptext="&queryname_tooltip;" />
+				</row>
+				<row align="center">
+					<label control="place_uri" value="&place_uri;" />
+					<textbox id="place_uri" tooltiptext="&placeuri_tooltip;" />
+				</row>
+			</rows>
+		</grid>
+  </groupbox>
+
+	<tabbox>
+		<tabs id="mainTabs">
+			<tab label="&parameters;" />
+			<tab label="&attributes;" />
+			<tab label="&help;" />
+		</tabs>
+		<tabpanels>
+			<tabpanel orient="vertical">
+				<groupbox>
+					<caption label="&folder;"/>
+					<vbox align="center">
+						<hbox>
+							<checkbox id="PLACES_ROOT" label="&root;" />
+							<checkbox id="BOOKMARKS_MENU" label="&menu;" />
+							<checkbox id="TOOLBAR" label="&toolbar;" />
+						</hbox>
+						<hbox>
+							<checkbox id="TAGS" label="&tags;" />
+							<checkbox id="UNFILED_BOOKMARKS" label="&unfiled;" />
+							<checkbox id="only_bookmarked" label="&only_bookmarked;" tooltiptext="&onlybookmarked_tooltip;" />
+						</hbox>
+					</vbox>
+				</groupbox>
+				<groupbox>
+					<grid flex="1">
+						<columns>
+							<column align="right"/>
+							<column flex="1"/>
+						</columns>
+						<rows>
+							<row align="center">
+								<label control="terms" value="&terms;" />
+								<textbox id="terms" tooltiptext="&terms_tooltip;" />
+							</row>
+							<row align="center">
+								<checkbox id="tag" label="&tag;" tooltiptext="&tag_tooltip;" />
+								<checkbox id="not_tag" label="&not_tag;" tooltiptext="&not_tag_tooltip;" />
+							</row>
+							<row align="center">
+								<label control="current_time" value="&current_time;" />
+								<textbox id="current_time" tooltiptext="&currenttime_tooltip;" readonly="true" />
+							</row>
+							<row align="center">
+								<label control="begin_time" value="&begin_time;" />
+								<textbox id="begin_time" tooltiptext="&begintime_tooltip;" type="number" min="-1" value="-1" />
+							</row>
+							<row align="center">
+							<label control="begin_time_ref" value="&begin_time_ref;" />
+							<menulist id="begin_time_ref">
+								<menupopup>
+									<menuitem label="&jan1970;" value="0" />
+									<menuitem label="&today;" value="1" />
+									<menuitem label="&now;" value="2" />
+								</menupopup>
+							</menulist>
+							</row>
+							<row align="center">
+								<label control="end_time" value="&end_time;" />
+								<textbox id="end_time" tooltiptext="&endtime_tooltip;" type="number" min="-1" value="-1" />
+							</row>
+							<row align="center">
+							<label control="end_time_ref" value="&end_time_ref;" />
+							<menulist id="end_time_ref">
+								<menupopup>
+									<menuitem label="&jan1970;" value="0" />
+									<menuitem label="&today;" value="1" />
+									<menuitem label="&now;" value="2" />
+								</menupopup>
+							</menulist>
+							</row>
+							<row align="center">
+								<label control="min_visits" value="&min_visits;" />
+								<textbox id="min_visits" tooltiptext="&minvisits_tooltip;" type="number" min="-1" value="-1" />
+							</row>
+							<row align="center">
+								<label control="max_visits" value="&max_visits;" />
+								<textbox id="max_visits" tooltiptext="&maxvisits_tooltip;" type="number" min="-1" value="-1" />
+							</row>
+						</rows>
+					</grid>
+				</groupbox>
+				<groupbox>
+					<grid flex="1">
+						<columns>
+							<column align="right"/>
+							<column flex="1"/>
+							<column align="right"/>
+						</columns>
+						<rows>
+							<row align="center">
+								<label control="domain" value="&domain;" />
+								<hbox align="center">
+									<textbox id="domain" tooltiptext="&domain_tooltip;" />
+									<checkbox id="domain_host" label="&domain_host;" tooltiptext="&domainhost_tooltip;" />
+								</hbox>
+							</row>
+							<row align="center">
+								<label control="annotation" value="&annotation;" />
+								<hbox align="center">
+									<textbox id="annotation" tooltiptext="&annotation_tooltip;" />
+									<checkbox id="reject_annotation" label="&reject_annotation;" tooltiptext="&rejectannotation_tooltip;" />
+								</hbox>
+							</row>
+							<row align="center">
+								<label control="uri" value="&uri;" />
+								<hbox align="center">
+									<textbox id="uri" tooltiptext="&uri_tooltip;" />
+									<checkbox id="uri_prefix" label="&uri_prefix;" tooltiptext="&uriprefix_tooltip;" />
+								</hbox>
+							</row>
+						</rows>
+					</grid>
+				</groupbox>
+			</tabpanel>
+			<tabpanel orient="vertical">
+				<groupbox>
+					<caption label="&sort_by;"/>
+					<vbox align="center">
+						<hbox align="center">
+							<menulist id="sort_by" onselect="SearchPlaces.Editor.toggleSortingAnnotation();" >
+								<menupopup>
+									<menuitem label="" value="" />
+									<menuitem label="&unsorted;" value="0" />
+									<menuitem label="&title_asc;" value="1" />
+									<menuitem label="&visit;" value="2" />
+									<menuitem label="&location;" value="3" />
+									<menuitem label="&visit_count;" value="4" />
+									<menuitem label="&keyword;" value="5" />
+									<menuitem label="&date_added;" value="6" />
+									<menuitem label="&last_modified;" value="7"/>
+									<menuitem label="&tags;" value="9" />
+									<menuitem label="&anno;" value="10" />
+								</menupopup>
+							</menulist>
+							<textbox id="sorting_annotation" tooltiptext="&sortingannotation_tooltip;" />
+						</hbox>
+						<radiogroup id="sort_order">
+							<hbox align="center">
+								<radio id="asc" label="&asc;" />
+								<radio id="desc" label="&desc;" />
+							</hbox>
+						</radiogroup>
+					</vbox>
+				</groupbox>
+				<groupbox>
+					<grid flex="1">
+						<columns>
+							<column align="right"/>
+							<column flex="1"/>
+						</columns>
+						<rows>
+							<row align="center">
+								<label control="type" value="&type;" />
+								<menulist id="type">
+									<menupopup>
+										<menuitem label="" value="" />
+										<menuitem label="&uri;" value="0" />
+										<menuitem label="&visit;" value="1" />
+										<menuitem label="&full_visit;" value="2" />
+										<menuitem label="&date_query;" value="3" />
+										<menuitem label="&site_query;" value="4" />
+										<menuitem label="&date_site_query;" value="5" />
+										<menuitem label="&tag_query;" value="6" />
+										<menuitem label="&tag_container;" value="7" />
+									</menupopup>
+								</menulist>
+							</row>
+							<row align="center">
+								<label control="exclude_annotation" value="&exclude_annotation;" />
+								<textbox id="exclude_annotation" tooltiptext="&excludeannotation_tooltip;" />
+							</row>
+							<row align="center">
+								<label control="original_title" value="&original_title;" />
+								<textbox id="original_title" tooltiptext="&originaltitle_tooltip;" />
+							</row>
+							<row align="center">
+								<label control="max_results" value="&max_results;" />
+								<textbox id="max_results" tooltiptext="&maxresults_tooltip;" type="number" min="0"  />
+							</row>
+							<row align="center">
+								<label control="query_type" value="&query_type;" />
+								<menulist id="query_type">
+									<menupopup>
+										<menuitem label="" value="" />
+										<menuitem label="&both;" value="2" />
+										<menuitem label="&history;" value="0" />
+										<menuitem label="&bookmarks;" value="1" />
+									</menupopup>
+								</menulist>
+							</row>
+							<row align="center">
+								<label control="redirects_mode" value="&redirects_mode;" />
+								<menulist id="redirects_mode">
+									<menupopup>
+										<menuitem label="" value="" />
+										<menuitem label="&all;" value="0" />
+										<menuitem label="&source;" value="1" />
+										<menuitem label="&target;" value="2" />
+									</menupopup>
+								</menulist>
+							</row>
+						</rows>
+					</grid>
+				</groupbox>
+				<groupbox>
+					<vbox align="center">
+						<grid>
+							<rows>
+								<row align="center">
+									<checkbox id="exclude_items" label="&exclude_items;" tooltiptext="&excludeitems_tooltip;" />
+									<checkbox id="exclude_queries" label="&exclude_queries;" tooltiptext="&excludequeries_tooltip;" />
+								</row>
+								<row align="center">
+									<checkbox id="resolve_titles" label="&resolve_titles;" tooltiptext="&resolvetitles_tooltip;" />
+									<checkbox id="expand_queries" label="&expand_queries;" tooltiptext="&expandqueries_tooltip;" />
+								</row>
+								<row align="center">
+									<checkbox id="show_sessions" label="&show_sessions;" tooltiptext="&showsessions_tooltip;" />
+									<checkbox id="exclude_folders" label="&exclude_folders;" tooltiptext="&excludefolders_tooltip;" />
+								</row>
+								<row align="center">
+									<checkbox id="include_hidden" label="&include_hidden;" tooltiptext="&includehidden_tooltip;" />
+									<checkbox id="apply_containers" label="&apply_containers;" tooltiptext="&applycontainers_tooltip;" />
+								</row>
+							</rows>
+						</grid>
+					</vbox>
+				</groupbox>
+			</tabpanel>
+			<tabpanel orient="vertical">
+				<groupbox>
+					<caption label="&search_help;"/>
+					<label class="text-link" style="color:blue" href="https://developer.mozilla.org/En/Places_query_URIs" value="https://developer.mozilla.org/En/Places_query_URIs" />
+					<separator class="thin"/>
+				</groupbox>
+				<groupbox>
+					<caption label="&searchplaces_help;"/>
+					<label class="text-link" style="color:blue" href="http://www.andyhalford.com/searchplaces" value="http://www.andyhalford.com/searchplaces" />
+					<separator class="thin"/>
+				</groupbox>
+			</tabpanel>
+		</tabpanels>
+  </tabbox>
+</dialog>

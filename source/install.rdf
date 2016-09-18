@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		 xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>searchplaces@andyhalford.com</em:id>
+		<em:name>SearchPlaces</em:name>
+		<em:version>1.4.2</em:version>
+		<em:creator>Andy Halford</em:creator>
+		<em:homepageURL>http://www.andyhalford.com/searchplaces/index.html</em:homepageURL>
+		<em:optionsURL>chrome://searchplaces/content/searches.xul</em:optionsURL>
+		<em:iconURL>chrome://searchplaces/skin/icon48.png</em:iconURL>
+    <em:icon64URL>chrome://searchplaces/skin/icon64.png</em:icon64URL>
+		<em:type>2</em:type>
+
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>13.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+		<!-- SeaMonkey -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+				<em:minVersion>2.1b1</em:minVersion>
+				<em:maxVersion>2.10.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+
+	</Description>
+</RDF>
