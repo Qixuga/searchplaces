@@ -6,12 +6,15 @@
 		<em:id>searchplaces@andyhalford.com</em:id>
 		<em:name>SearchPlaces</em:name>
 		<em:version>1.4.2</em:version>
-		<em:creator>Andy Halford</em:creator>
-		<em:homepageURL>http://www.andyhalford.com/searchplaces/index.html</em:homepageURL>
+		
+		<em:type>2</em:type>
+		<em:homepageURL>https://github.com/Qixuga/searchplaces</em:homepageURL>
 		<em:optionsURL>chrome://searchplaces/content/searches.xul</em:optionsURL>
 		<em:iconURL>chrome://searchplaces/skin/icon48.png</em:iconURL>
     <em:icon64URL>chrome://searchplaces/skin/icon64.png</em:icon64URL>
-		<em:type>2</em:type>
+
+		<em:creator>Andy Halford</em:creator>
+		<em:contributor>Frank Kirchner</em:contributor>
 
 		<!-- Firefox -->
 		<em:targetApplication>
@@ -30,6 +33,14 @@
 				<em:maxVersion>2.10.*</em:maxVersion>
 			</Description>
 		</em:targetApplication>
-
+		
+		<!--K-Meleon-->
+		<em:targetApplication>
+			<Description>
+				<em:id>{944df56f-c0ec-4d7b-94b6-f625c8cc96ea}</em:id>
+				<em:minVersion>74.0</em:minVersion>
+				<em:maxVersion>78.0</em:maxVersion>
+			</Description>
+		</em:targetApplication>
 	</Description>
 </RDF>
